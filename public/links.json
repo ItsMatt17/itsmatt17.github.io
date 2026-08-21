@@ -1,0 +1,12 @@
+[
+  {
+    "icon": "./github.svg",
+    "name": "Github",
+    "url": "https://www.github.com/ItsMatt17"
+  },
+  {
+    "icon": "./linkedln.svg",
+    "name": "Linkedln",
+    "url": "https://www.linkedin.com/in/matty-patty/"
+  }
+]
