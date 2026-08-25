@@ -19,11 +19,11 @@ function App() {
   return (
     <div className="flex h-full min-h-screen items-center justify-center bg-[radial-gradient(#e5ddcb_0.6000000001px,#a7c5bd_0.600000001px)] bg-size-[10px_10px]">
       <div className="relative flex w-1/2 max-w-lg min-w-xs flex-col gap-y-4 rounded-lg bg-neutral-50 p-4 pt-16 shadow-2xl">
-        <div className="absolute inset-0 z-10 m-auto max-w-32 -translate-y-16 drop-shadow-md/50">
-          <img src={PROFILE_PICTURE} className="rounded-full object-cover" />
+        <div className="absolute inset-0 z-10 m-auto size-32 -w-32 -translate-y-48 drop-shadow-md/50">
+          <img src={PROFILE_PICTURE} className="size-full rounded-full object-cover" />
         </div>
         <div className="relative space-y-4">
-          <h1 className="text-center text-2xl font-medium">Matthew Payne</h1>
+          <h1 className="text-center text-3xl font-medium">Matthew Payne</h1>
           <Socials data={data} />
         </div>
       </div>
