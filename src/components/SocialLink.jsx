@@ -1,13 +1,16 @@
 function SocialButton({
-  onClick = (_) => {},
+  onClick = (_) => { },
   href = "",
   icon = "",
   name = "",
+  target = "_blank",
   children,
 }) {
   return (
     <a
       href={href}
+      target={target}
+      rel="noopener"
       className="group relative flex items-center gap-x-2 rounded-md bg-neutral-200 p-2 px-4 transition duration-100 ease-in-out hover:-translate-y-1 hover:bg-neutral-400"
       onClick={(e) => onClick(e)}
       ng-href={name}
