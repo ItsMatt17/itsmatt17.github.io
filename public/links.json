@@ -1,12 +1,19 @@
-[
-  {
-    "icon": "./github.svg",
-    "name": "Github",
-    "url": "https://www.github.com/ItsMatt17"
-  },
-  {
-    "icon": "./linkedln.svg",
-    "name": "Linkedln",
-    "url": "https://www.linkedin.com/in/matty-patty/"
-  }
-]
+{
+  "links": [
+    {
+      "icon": "./github.svg",
+      "name": "Github",
+      "url": "https://www.github.com/ItsMatt17"
+    },
+    {
+      "icon": "./linkedln.svg",
+      "name": "Linkedln",
+      "url": "https://www.linkedin.com/in/matty-patty/"
+    }
+  ],
+
+  "copy": [
+    { "icon": "./discord.svg", "name": "Discord", "copy": "matty.patty." },
+    { "icon": "./email.svg", "name": "Email", "copy": "placeholder@gmail.com" }
+  ]
+}
