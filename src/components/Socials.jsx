@@ -7,14 +7,20 @@ function Socials({ data }) {
     return <p>Could not fetch links :(</p>
 
   return (
-    <div className="flex flex-col gap-y-2">
-      {data.links.map((link) => (
-        <SocialLink href={link.url} icon={link.icon} name={link.name} />
-      ))}
-      {data.copy.map((copy) => (
-        <SocialCopy icon={copy.icon} name={copy.name} copy={copy.copy} />
-      ))}
-    </div>
+    <ul className="flex flex-col gap-y-2">
+      {data.map((social) => (
+        <li >
+          {
+            social.isLink
+              ? <SocialLink key={social.name} href={social.url} icon={social.icon} name={social.name} />
+              : <SocialCopy key={social.name} icon={social.icon} name={social.name} copy={social.copy} />
+          }
+
+        </li>
+
+      ))
+      }
+    </ul >
   )
 }
 
