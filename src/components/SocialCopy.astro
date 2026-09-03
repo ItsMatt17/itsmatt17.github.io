@@ -1,0 +1,46 @@
+---
+import Logo from './Logo.astro'
+interface Props {
+  name: string
+  content: string
+  icon: string
+}
+
+const {name, content, icon} = Astro.props
+---
+<div
+  tabindex={0}
+  data-tooltip-container
+  class="group relative flex cursor-pointer items-center gap-x-2 rounded-md bg-neutral-200 p-2 px-4 transition duration-100 ease-in-out hover:-translate-y-1 hover:bg-neutral-400"
+  data-copy={content}
+  >
+
+    <Logo name={name} icon={icon} />
+    <p>{name}</p>
+    <div data-tooltip class="opactiy-0 invisible absolute bottom-full left-1/2 mb-2 w-max -translate-x-1/2 transform rounded bg-gray-700 px-2 py-1 text-sm text-white opacity-0 shadow-lg group-hover:opacity-100 group-hover:visible">
+      Click to Copy
+    </div>
+</div>
+
+<script>
+
+  const containers = document.querySelectorAll("[data-tooltip-container]")
+
+
+  // Note: Need this b/c one script for all components  
+  containers.forEach((container) => {
+    container.addEventListener("click", (e) => {
+    const tooltip = container.querySelector("[data-tooltip]")
+
+    const target = e.target
+    if (!(tooltip instanceof HTMLElement)) return 
+    if (!(target instanceof HTMLElement)) return 
+
+    navigator.clipboard.writeText(target.dataset.copy ?? "")
+    tooltip.textContent = "Copied!"
+    setTimeout(() => tooltip.textContent = "Click to Copy!", 1500)
+
+    })
+})
+
+</script>

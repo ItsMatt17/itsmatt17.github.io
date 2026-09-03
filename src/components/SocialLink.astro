@@ -1,0 +1,24 @@
+---
+import Logo from  './Logo.astro'
+interface Props {
+  name: string
+  content: string
+  icon: string
+}
+
+
+const {name, content, icon} = Astro.props
+---
+
+ <a
+    href={content}
+    target="_blank"
+    tabindex={0}
+    rel="noopener"
+    class="relative flex items-center gap-x-2 rounded-md bg-neutral-200 p-2 px-4 transition duration-100 ease-in-out hover:-translate-y-1 hover:bg-neutral-400" 
+    ng-href={name}
+  >
+    
+  <Logo name={name} icon={icon}/>
+   <p>{name}</p>
+</a>

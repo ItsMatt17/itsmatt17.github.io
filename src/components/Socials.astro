@@ -1,0 +1,27 @@
+---
+import SocialLink from './SocialLink.astro'
+import SocialCopy from './SocialCopy.astro'
+import socials from '../data/socials.json'
+
+---
+<div>
+<ul class="flex flex-col gap-y-2">
+      {socials.map((social) => (
+        <li >
+          {social.isLink ? (
+            <SocialLink
+              content={social.content}
+              icon={social.icon}
+              name={social.name}
+            />
+          ) : (
+            <SocialCopy
+              icon={social.icon}
+              name={social.name}
+              content={social.content}
+            />
+          )}
+        </li>
+      ))}
+    </ul>
+</div>

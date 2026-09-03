@@ -1,0 +1,26 @@
+[
+  {
+    "icon": "/github.svg",
+    "name": "Github",
+    "content": "https://www.github.com/ItsMatt17",
+    "isLink": true
+  },
+  {
+    "icon": "/linkedln.svg",
+    "name": "Linkedln",
+    "content": "https://www.linkedin.com/in/matty-patty/",
+    "isLink": true
+  },
+  {
+    "icon": "/discord.svg",
+    "name": "Discord",
+    "content": "matty.patty.",
+    "isLink": false
+  },
+  {
+    "icon": "/email.svg",
+    "name": "Email",
+    "content": "matthew.payne17@icloud.com",
+    "isLink": false
+  }
+]

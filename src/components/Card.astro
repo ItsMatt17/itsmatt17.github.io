@@ -1,0 +1,22 @@
+---
+import { Image } from 'astro:assets'
+import '../styles/global.css'
+import Socials from '../components/Socials.astro'
+import profile from '../images/profile.jpg'
+---
+
+<div class="relative flex w-1/2 max-w-lg min-w-xs flex-col gap-y-4 rounded-lg bg-neutral-50 p-4 pt-16 shadow-2xl">
+  <div class="absolute inset-0 z-10 m-auto size-32 -top-full drop-shadow-md/50">
+    <Image
+      src={profile}
+      alt="Silly profile picture containing Matthew with excessively long nose."
+      class="size-full rounded-full object-cover"
+    />
+  </div>
+  <div class="relative space-y-4">
+    <h1 class="text-center text-3xl font-medium">Matthew Payne</h1>
+
+    <Socials/>
+  </div>
+</div>
+
