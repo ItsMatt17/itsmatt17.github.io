@@ -1,12 +1,12 @@
-import SocialLink from "./SocialLink.jsx"
-import SocialCopy from "./SocialCopy.jsx"
+import SocialLink from './SocialLink.jsx'
+import SocialCopy from './SocialCopy.jsx'
 
 function Socials({ data }) {
   if (!data || Object.keys(data).length == 0)
     return <p>Could not fetch links :(</p>
 
   return (
-    <ul className="flex flex-col gap-y-2">
+    <ul className='flex flex-col gap-y-2'>
       {data.map((social) => (
         <li key={social.name} >
           {social.isLink ? (

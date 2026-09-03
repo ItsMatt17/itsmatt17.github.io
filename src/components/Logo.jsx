@@ -1,8 +1,8 @@
 function Logo({ name, icon }) {
   return (
-    <div className="max-h-10 max-w-10">
+    <div className='max-h-10 max-w-10'>
       <img
-        className="h-auto w-full object-cover"
+        className='h-auto w-full object-cover'
         src={icon}
         alt={`Logo for ${name}.`}
       />
