@@ -2,12 +2,13 @@
 import SocialLink from './SocialLink.astro'
 import SocialCopy from './SocialCopy.astro'
 import socials from '../data/socials.json'
-
 ---
+
 <div>
-<ul class="flex flex-col gap-y-2">
-      {socials.map((social) => (
-        <li >
+  <ul class="flex flex-col gap-y-2">
+    {
+      socials.map((social) => (
+        <li>
           {social.isLink ? (
             <SocialLink
               content={social.content}
@@ -22,6 +23,7 @@ import socials from '../data/socials.json'
             />
           )}
         </li>
-      ))}
-    </ul>
+      ))
+    }
+  </ul>
 </div>
