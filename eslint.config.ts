@@ -17,7 +17,6 @@ export default defineConfig([
 
   ...tseslint.configs.recommended,
   ...eslintPluginAstro.configs.recommended,
-  prettier,
 
   {
     files: ['**/*.json'],
@@ -36,4 +35,5 @@ export default defineConfig([
     files: ['**/*.astro'],
     plugins: { eslintPluginAstro },
   },
+  prettier,
 ])
